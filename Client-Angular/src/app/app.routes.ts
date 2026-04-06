@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 import { DatePage } from './pages/date/date.page';
 import { ProductsPage } from './pages/products/products.page';
 import { UsersPage } from './pages/users/users.page';
+import { VentasPage } from './pages/ventas/ventas.page';
+import { DistribuidoresPage } from './pages/distribuidores/distribuidores.page';
 import { EmpresasPage } from './pages/empresas/empresas.page';
 
 /**
@@ -48,9 +50,11 @@ export const routes: Routes = [
    */
   { path: 'date', component: DatePage },
 
+  { path: 'ventas', component: VentasPage },
+  { path: 'distribuidores', component: DistribuidoresPage },
   { path: 'empresas', component: EmpresasPage },
 
-  
+
   /**
    * Ruta comodín.
    *
@@ -60,3 +64,4 @@ export const routes: Routes = [
    */
   { path: '**', redirectTo: 'users' },
 ];
+
