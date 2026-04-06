@@ -7,6 +7,11 @@ import { of } from 'rxjs';
 })
 export class DistribuidoresService {
 
+  /**
+   * Servicio que provee datos de distribuidores.
+   * Actualmente devuelve los datos mockeados desde `DISTRIBUIDORES`.
+   * @public
+   */
   getAllDistribuidores() {
     return of(DISTRIBUIDORES);
   }

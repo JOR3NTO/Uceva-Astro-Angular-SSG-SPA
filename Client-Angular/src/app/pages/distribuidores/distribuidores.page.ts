@@ -12,12 +12,26 @@ import { AlertComponent } from '../../components/alert/alert.component';
 })
 export class DistribuidoresPage {
 
+  /**
+   * Lista de distribuidores cargada desde el servicio.
+   * @public
+   */
   distribuidores: Distribuidor[] = [];
 
+  /**
+   * Estado de la página: `init` | `loading` | `success` | `error`.
+   * Se usa para controlar vistas de carga/errores.
+   * @public
+   */
   state: State = 'init';
 
+  /** Servicio inyectado que provee datos de distribuidores. */
   private distribuidoresService = inject(DistribuidoresService);
 
+  /**
+   * Carga la lista de distribuidores al inicializar la página.
+   * Gestiona el estado de carga y errores.
+   */
   ngOnInit(): void {
     this.state = 'loading';
     this.distribuidoresService.getAllDistribuidores().subscribe({

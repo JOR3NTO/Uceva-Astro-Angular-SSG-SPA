@@ -1,5 +1,15 @@
 import { Distribuidor } from "../interfaces/distribuidores.interface";
 
+/**
+ * Datos mock de distribuidores usados en desarrollo y pruebas.
+ * Esta constante simula una fuente de datos (mock) que representa
+ * información básica de productos, utilizada para:
+ * - Pruebas unitarias
+ * - Desarrollo sin backend
+ * - Ejercicios académicos
+ *
+ * @public
+ */
 export const DISTRIBUIDORES: Distribuidor[] = [
     {
         id: 1,

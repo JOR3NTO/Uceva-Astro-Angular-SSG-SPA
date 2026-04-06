@@ -1,5 +1,9 @@
 import { Distribuidor } from "../interfaces/distribuidores.interface";
 
+/**
+ * Datos mock de distribuidores usados en desarrollo y pruebas.
+ * @public
+ */
 export const DISTRIBUIDORES: Distribuidor[] = [
     {
         id: 1,
