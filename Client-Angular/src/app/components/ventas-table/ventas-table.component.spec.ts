@@ -1,23 +1,32 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
-import { VentasComponent } from './ventas-table.component';
+import { VentasTableComponent } from './ventas-table.component';
+import { VENTAS } from '../../data/ventas.interface';
 
-describe('VentasComponent', () => {
-  let component: VentasComponent;
-  let fixture: ComponentFixture<VentasComponent>;
+describe('VentasTableComponent', () => {
+  let component: VentasTableComponent;
+  let fixture: ComponentFixture<VentasTableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [VentasComponent]
+      imports: [VentasTableComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(VentasComponent);
+    fixture = TestBed.createComponent(VentasTableComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
+    fixture.detectChanges();
     expect(component).toBeTruthy();
+  });
+
+  it('should render a row per venta', () => {
+    component.ventas = VENTAS;
+    fixture.detectChanges();
+    const rows = fixture.debugElement.queryAll(By.css('tbody tr'));
+    expect(rows.length).toBe(VENTAS.length);
   });
 });
