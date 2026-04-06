@@ -1,5 +1,9 @@
 import { Empresa } from "../interfaces/empresas.interface";
 
+/**
+ * Datos de ejemplo de empresas usados como fuente mock.
+ * @public
+ */
 export const EMPRESAS: Empresa[] = [
   {
     id: 1,

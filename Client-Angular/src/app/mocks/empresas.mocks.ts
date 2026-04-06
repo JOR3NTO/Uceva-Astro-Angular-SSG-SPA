@@ -1,5 +1,9 @@
 import { Empresa } from "../interfaces/empresas.interface";
 
+/**
+ * Datos mock de `Empresa` para pruebas unitarias.
+ * @public
+ */
 export const EMPRESAS_MOCK: Empresa[]= [
     {
         id: 1,

@@ -10,8 +10,17 @@ import { Empresa, EmpresaCategory } from '../../interfaces/empresas.interface';
 })
 export class EmpresasTableComponent {
 
+  /**
+   * Lista de empresas a mostrar en la tabla.
+   * @public
+   */
   @Input() empresas: Empresa[] = [];
 
+  /**
+   * Mapeo de categoría de `Empresa` a `BadgeType` del design-system.
+   * Permite mostrar una etiqueta según la industria.
+   * @public
+   */
   categoryMap: Record<EmpresaCategory, BadgeType> = {
     'Tecnología': 'primary',
     'Salud': 'success',

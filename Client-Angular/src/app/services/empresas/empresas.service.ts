@@ -6,6 +6,11 @@ import { of } from 'rxjs';
   providedIn: 'root',
 })
 export class EmpresasService {
+  /**
+   * Servicio que provee datos de empresas.
+   * Actualmente devuelve los datos mockeados desde `EMPRESAS`.
+   * @public
+   */
   getAllEmpresas() {
     return of(EMPRESAS);
   }

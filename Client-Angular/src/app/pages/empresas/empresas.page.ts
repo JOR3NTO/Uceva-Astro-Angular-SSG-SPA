@@ -12,12 +12,26 @@ import { EmpresasService } from '../../services/empresas/empresas.service';
 })
 export class EmpresasPage {
 
+  /**
+   * Lista de empresas cargada desde el servicio.
+   * @public
+   */
   empresas: Empresa[] = [];
 
+  /**
+   * Estado de la página: `init` | `loading` | `success` | `error`.
+   * Se usa para controlar vistas de carga/errores.
+   * @public
+   */
   state: State = 'init';
 
+  /** Servicio inyectado que provee datos de empresas. */
   private empresasService = inject(EmpresasService);
 
+  /**
+   * Carga la lista de empresas al inicializar la página.
+   * Gestiona el estado de carga y errores.
+   */
   ngOnInit(): void {
     this.state = 'loading';
     this.empresasService.getAllEmpresas().subscribe({
