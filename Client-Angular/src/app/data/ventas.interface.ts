@@ -1,5 +1,11 @@
 import { Venta } from "../interfaces/ventas.interface";
 
+/**
+ * Conjunto de datos de ejemplo (fixture) con ventas.
+ *
+ * Se exporta como `VENTAS` y se utiliza como fuente de datos
+ * local por `VentasService` cuando no hay un backend disponible.
+ */
 export const VENTAS: Venta[] = [
   {
     id: 1,
