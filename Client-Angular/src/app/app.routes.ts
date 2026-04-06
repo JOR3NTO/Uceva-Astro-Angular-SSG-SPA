@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { DatePage } from './pages/date/date.page';
 import { ProductsPage } from './pages/products/products.page';
 import { UsersPage } from './pages/users/users.page';
+import { VentasPage } from './pages/ventas/ventas.page';
 
 /**
  * Definición de las rutas principales de la aplicación.
@@ -47,6 +48,8 @@ export const routes: Routes = [
    */
   { path: 'date', component: DatePage },
 
+  { path: 'ventas', component: VentasPage },
+
   /**
    * Ruta comodín.
    *
@@ -55,4 +58,11 @@ export const routes: Routes = [
    * automáticamente a la ruta de usuarios.
    */
   { path: '**', redirectTo: 'users' },
+
+
+
+  
+
+
+
 ];
