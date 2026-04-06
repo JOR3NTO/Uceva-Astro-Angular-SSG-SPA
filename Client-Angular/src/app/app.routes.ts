@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { DatePage } from './pages/date/date.page';
 import { ProductsPage } from './pages/products/products.page';
 import { UsersPage } from './pages/users/users.page';
+import { VentasPage } from './pages/ventas/ventas.page';
 import { DistribuidoresPage } from './pages/distribuidores/distribuidores.page';
 
 /**
@@ -47,6 +48,8 @@ export const routes: Routes = [
    * de mostrar la fecha actual del sistema.
    */
   { path: 'date', component: DatePage },
+
+  { path: 'ventas', component: VentasPage },
   { path: 'distribuidores', component: DistribuidoresPage },
 
   /**
