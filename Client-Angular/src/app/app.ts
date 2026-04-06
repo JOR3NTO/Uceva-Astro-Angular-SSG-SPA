@@ -61,6 +61,9 @@ export class App {
       { text: 'Productos', url: '/products' },
       { text: 'Fecha', url: '/date' },
       { text: 'Ventas', url: '/ventas' },
+
+      { text: 'Distribuidores', url: '/distribuidores' },
     ]
   };
 }
+
