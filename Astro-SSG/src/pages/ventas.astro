@@ -1,0 +1,36 @@
+---
+import { VENTAS } from "@data/Ventas";
+import type { Venta } from "@interfaces/Ventas";
+import MainLayout from "@layouts/MainLayout.astro";
+
+const ventas: Venta[] = VENTAS;
+
+const formatCurrency = (v: number) =>
+  new Intl.NumberFormat("es-ES", { style: "currency", currency: "USD" }).format(v);
+
+const formatDate = (d: Date) => new Date(d).toLocaleDateString("es-ES");
+---
+<MainLayout>
+  <table class="table table-striped border">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Fecha</th>
+      </tr>
+    </thead>
+    <tbody>
+      {ventas.map((venta) => (
+        <tr>
+          <th scope="row">{venta.id}</th>
+          <td>{venta.producto}</td>
+          <td>{venta.cantidad}</td>
+          <td>{formatCurrency(venta.precio)}</td>
+          <td>{formatDate(venta.fecha)}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</MainLayout>
