@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { DistribuidoresService } from './distribuidores.service';
-import { DISTRIBUIDORES } from '../../mocks/distribuidor.mocks';
+import { DISTRIBUIDORES } from '../../data/distribuidores.interface';
 
 describe('DistribuidoresService', () => {
   let service: DistribuidoresService;

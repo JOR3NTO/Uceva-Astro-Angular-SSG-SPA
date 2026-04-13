@@ -40,8 +40,7 @@ export class VentasPage {
         this.ventas = ventas;
         this.state = 'success';
       },
-      error: (error) => {
-        console.error(error)
+      error: () => {
         this.state = 'error';
       },
     })
