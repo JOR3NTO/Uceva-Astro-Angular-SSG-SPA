@@ -1,10 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { Venta } from '../../interfaces/ventas.interface';
-import { BadgeAtom } from '@brejcha13320/design-system-bootstrap';
 
 @Component({
   selector: 'app-ventas-table',
-  imports: [BadgeAtom],
+  imports: [],
   templateUrl: './ventas-table.component.html',
 })
 /**
